@@ -1,5 +1,5 @@
 # http2-wrapper
-> HTTP/2 client, just with the familiar `https` API
+> HTTP/2 client, just with the familiar `https` API. This module is based on http2-wrapper.
 
 [![Node CI](https://github.com/szmarczak/http2-wrapper/workflows/Node%20CI/badge.svg)](https://github.com/szmarczak/http2-wrapper/actions)
 [![codecov](https://codecov.io/gh/szmarczak/http2-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/szmarczak/http2-wrapper)
