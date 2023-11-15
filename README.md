@@ -1,27 +1,22 @@
-# http2-wrapper
+# apipost-http2-wrapper
 > HTTP/2 client, just with the familiar `https` API. This module is based on http2-wrapper.
-
-[![Node CI](https://github.com/szmarczak/http2-wrapper/workflows/Node%20CI/badge.svg)](https://github.com/szmarczak/http2-wrapper/actions)
-[![codecov](https://codecov.io/gh/szmarczak/http2-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/szmarczak/http2-wrapper)
-[![npm](https://img.shields.io/npm/dm/http2-wrapper.svg)](https://www.npmjs.com/package/http2-wrapper)
-[![install size](https://packagephobia.now.sh/badge?p=http2-wrapper)](https://packagephobia.now.sh/result?p=http2-wrapper)
 
 This package was created to support HTTP/2 without the need to rewrite your code.<br>
 I recommend adapting to the [`http2`](https://nodejs.org/api/http2.html) module if possible - it's much simpler to use and has many cool features!
 
-**Tip**: `http2-wrapper` is very useful when you rely on other modules that use the HTTP/1 API and you want to support HTTP/2.
+**Tip**: `apipost-http2-wrapper` is very useful when you rely on other modules that use the HTTP/1 API and you want to support HTTP/2.
 
-**Pro Tip**: While the native `http2` doesn't have agents yet, you can use `http2-wrapper` Agents and still operate on the native HTTP/2 streams.
+**Pro Tip**: While the native `http2` doesn't have agents yet, you can use `apipost-http2-wrapper` Agents and still operate on the native HTTP/2 streams.
 
 ## Installation
 
-> `$ npm install http2-wrapper`<br>
-> `$ yarn add http2-wrapper`
+> `$ npm install apipost-http2-wrapper`<br>
+> `$ yarn add apipost-http2-wrapper`
 
 ## Usage
 
 ```js
-const http2 = require('http2-wrapper');
+const http2 = require('apipost-http2-wrapper');
 
 const options = {
 	hostname: 'nghttp2.org',
@@ -97,7 +92,7 @@ Returns a Promise giving proper `ClientRequest` instance (depending on the ALPN)
 **Note**: The `agent` option represents an object with `http`, `https` and `http2` properties.
 
 ```js
-const http2 = require('http2-wrapper');
+const http2 = require('apipost-http2-wrapper');
 
 const options = {
 	hostname: 'httpbin.org',
@@ -215,7 +210,7 @@ Same as [`https.IncomingMessage`](https://nodejs.org/api/https.html#https_class_
 Usage example:
 
 ```js
-const http2 = require('http2-wrapper');
+const http2 = require('apipost-http2-wrapper');
 
 class MyAgent extends http2.Agent {
 	createConnection(origin, options) {
@@ -276,7 +271,7 @@ Default: `{enablePush: false}`
 
 [Settings](https://nodejs.org/api/http2.html#http2_settings_object) used by the current agent instance.
 
-#### agent.normalizeOptions([options](https://github.com/szmarczak/http2-wrapper/blob/master/source/agent.js))
+#### agent.normalizeOptions([options](https://github.com/szmarczak/apipost-http2-wrapper/blob/master/source/agent.js))
 
 Returns a string representing normalized options.
 
@@ -367,7 +362,7 @@ agent.on('session', session => {
 
 ## Proxy support
 
-Currently `http2-wrapper` provides support for these proxies:
+Currently `apipost-http2-wrapper` provides support for these proxies:
 
 - `HttpOverHttp2`
 - `HttpsOverHttp2`
