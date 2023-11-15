@@ -541,7 +541,6 @@ class Agent extends EventEmitter {
 						// 删除 h2 不支持的header
 						try {
 							headers = _.omitBy(headers, (value, key) => isDisallowedKey(key));
-							console.log(headers);
 						} catch (e) { }
 
 						const stream = session[kRequest](headers, streamOptions);
